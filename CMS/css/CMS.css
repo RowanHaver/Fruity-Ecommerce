@@ -1,0 +1,40 @@
+
+ul li{
+    /* Removes bullet points*/
+    list-style: none;
+    display: inline;
+}
+
+.title{
+    font-size: 35px;
+}
+
+.home_para{
+    font-size: 20px;
+    font-weight: 100px;
+}
+
+label{
+    font-size: 15px;
+}
+
+form{
+    display: flex;
+    /* direction of elments are set in a column */
+    flex-direction: column;
+}
+
+input{
+    margin: 0px 0px;
+    width: 300px; 
+    height: 25px;
+}
+
+button{
+    margin-top: 10px;
+    width: 307px;
+}
+
+table, th, td{
+    border: 1px solid black;
+}

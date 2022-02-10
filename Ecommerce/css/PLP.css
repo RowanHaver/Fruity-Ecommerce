@@ -1,0 +1,489 @@
+.navbar{
+    background-color: white;
+}
+
+.btn-outline-light {
+    color: black;
+    border-color: black;
+}
+
+.icons{
+    color: black;
+    padding-left: 20px;
+}
+
+
+.fourth_nav_menu{
+    /* !important is used for the bootstrap nav to make inline-flex work */
+    display: inline-flex !important;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+/*Navbar title*/
+.navbar_title{
+    /* Padding applied to move title*/
+    padding-left: 210px !important; 
+    font-size: 1.6rem !important; 
+    color: rgb(109, 163, 54) !important;
+}
+
+.navbar_bag_icon{
+    font-size: 1.7rem;
+}
+
+.navbar_person_icon{
+    font-size: 1.8rem;
+}
+
+.banner{
+    height: 450px;
+    width: 100%;
+    background-color: rgb(248, 248, 246);
+}
+
+.banner_img{
+    width: 720px;
+    height: auto;
+    /* positioned relative to the nearest positioned ancestor */
+    position: absolute;
+    right: 150px;
+    top: 50px;
+}
+
+.banner_info{
+    /* flex is a layout model */
+    display: flex;
+    /* Direction of elements are in a column*/
+    flex-direction: column;
+    padding-top: 170px;
+    padding-left: 120px;
+}
+
+.banner_header{
+    font-size: 35px;
+    /* Changes the font weight */
+    font-weight: 400;
+
+}
+
+.banner_text{
+    /* Using rgb to change the colour*/
+    color: rgb(65, 65, 65);
+}
+
+/* Button */
+.banner_button{
+  background-color: rgb(109, 163, 54);
+  color: white;
+  /* Removes the borders*/
+  border: none;
+  display: inline-block;
+  /* makes the button edges curved */
+  border-radius: 5px;
+  /* aligns text to center*/
+  text-align: center;
+  width: 120px;
+  height: 40px;
+}
+
+.description_row{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 200px;
+    /* display flex*/
+    display: flex;
+    /* horizontal center*/
+    justify-content: center;
+    /* vertical center*/
+    align-items: center;
+    /* Direction of elements are in a row*/
+    flex-direction: row;
+
+}
+
+.description_column{
+    /* display flex*/
+    display: flex;
+    /* horizontal center*/
+    justify-content: center;
+    /* vertical center*/
+    align-items: center;
+    /* Direction of elements are in a column*/
+    flex-direction: column;
+    margin: 25px 80px;
+    width: 170px;
+}
+
+.icon_image{
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+    /* vertical center*/
+    text-align: center;
+}
+
+.description_title{
+    font-size: 22px;
+    font-weight: 400;
+    color: rgb(109, 163, 54);
+    
+}
+
+.description_paragraph{
+    font-size: 16px;
+    color: rgb(65, 65, 65);
+}
+
+.small_product_section{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.small_product_column{
+    display: flex;
+    /* horizontal center*/
+    justify-content: center;
+    /* vertical center*/
+    align-items: center;
+    /* Direction of elements are in a column*/
+    flex-direction: column;
+}
+
+.small_product_title{
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.small_product_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Direction of elements are in a row*/
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.product_card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 260px;
+    width: 230px;
+    background-color: rgb(248, 248, 246);
+    margin: 0px 25px;
+    margin-top: 20px;
+    /*makes the button edges curved*/
+    border-radius: 7px;
+}
+
+.product_card_img{
+    width: 180px;
+    /*  height gets auto set depending on width*/
+    height: auto;
+    padding-top: 15px;
+}
+
+.product_card_title{
+    /* font size change based on px*/
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.product_card_price{
+    color: rgb(65, 65, 65);
+}
+
+.all_products_button{
+    background-color: rgb(109, 163, 54);
+    color: white;
+    border: none;
+    display: inline-block;
+    /*makes the button edges curved*/
+    border-radius: 5px;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+}
+
+
+/* Store */
+
+.store_banner{
+    height: 200px;
+    width: 100%;
+    background-color: rgb(248, 248, 246);
+}
+
+.store_banner_img{
+    width: 0px;
+    height: auto;
+    position: absolute;
+    right: 150px;
+    /* using position: absolute; top 0px puts the store banner to the top*/
+    top: 0px;
+}
+
+.store_banner_info{
+    display: flex;
+    /* Direction of elements are in a column*/
+    flex-direction: column;
+    /* 50px padding to the top*/
+    padding-top: 50px;
+    /* vertical center*/
+    text-align: center;
+}
+
+.store_banner_header{
+    font-size: 35px;
+    font-weight: 400;
+
+}
+
+.store_banner_text{
+    color: rgb(65, 65, 65);
+}
+
+.product_list{
+    height: 1000px;
+    width: 100%;
+}
+
+/* Sign in */
+
+.split_container{
+    height: 92vh;
+    display: flex;
+    margin: 0;
+}
+  
+.left {
+    width: 50vw;
+    background-color: rgb(248, 248, 246);
+
+    
+}
+
+.right {
+    width: 50vw;
+    background-color: white ;
+}
+
+.input{
+    padding-top: 60px;
+    display: flex;
+    /* vertical center*/
+    align-items: center;
+    /* Direction of elements are in a column*/
+    flex-direction: column;
+}
+
+.signin_title{
+    font-size: 30px;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    /* makes the font lighter*/
+    font-weight: 300;
+}
+
+
+.input_label{
+    font-size: 20px;
+    margin: 3px;
+}
+
+.input_box{
+    margin: 0px 0px;
+    width: 450px; 
+    height: 25px;
+}
+
+
+.submit_button{
+    /* sets height */
+    width: 450px;
+    /* sets width*/ 
+    height: 40px; 
+    background-color: rgb(109, 163, 54);
+    color: white;
+    margin-top: 30px; 
+    font-size: 15px;
+    /* removes border*/
+    border: none;
+    border-radius: 5px;
+}
+
+.account_question_div{
+    width: 300px; 
+    margin: auto; 
+    margin-top: 5px;
+}
+
+.account_question{
+    font-size: 20px;
+    margin-top: 5px;
+    
+}
+
+.account_question a{
+    color: rgb(109, 163, 54);
+}
+
+.right_img{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    /* using position: absolute; left 180px & top 130px puts the right image to the top and right*/
+    left: 180px;
+    top: 130px;
+}
+
+.right_column{
+    display: flex;
+    flex-direction: column;
+    /* vertical center */
+    align-items: center;
+    padding-top: 430px;
+}
+
+.right_title{
+    font-size: 50px;
+    font-weight: 400;
+    color: rgb(109, 163, 54);
+}
+
+.right_para{
+    font-size: 20px;
+    color: rgb(66, 66, 66);
+    font-weight: 200;
+}
+
+/* Sign up */
+
+.signup_title{
+    font-size: 30px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+
+
+/* Cart */
+
+.cart{
+    height: 65vh;
+    width: 100%;
+}
+
+.cart_title{
+    font-size: 25px;
+    font-weight: 300;
+    padding-top: 50px;
+    padding-left: 200px;
+}
+
+.cart_para{
+    font-size: 15px;
+    font-weight: 200;
+    color: rgb(65, 65, 65);
+    padding-top: 5px;
+    padding-left: 200px;
+}
+
+.cart_card{
+    border: 1px solid #ccc;
+    /* sets width based on view width */
+    width: 72.5vw;
+    height: 200px;
+    margin: auto;
+    /* card becomes a block element */
+    display: block;
+}
+
+
+.checkout_column{
+    display: flex;
+    flex-direction: column;
+    /* using display flex, sets items to the end of the page*/
+    align-items: end;
+    padding-top: 50px;
+    padding-right: 200px;
+    
+    
+}
+
+.checkout_row{
+    display: flex;
+    /* Direction of elements are in a row*/
+    flex-direction: row;
+}
+
+.checkout_price_title{
+    padding-right: 20px;
+    font-size: 17px;
+}
+
+.checkout_price{
+    font-size: 17px;
+}
+
+.checkout_button{
+    background-color: rgb(109, 163, 54);
+    color: white;
+    border: none;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+    height: 40px;
+}
+
+
+
+/* Footer */
+
+.footer1{
+    height: 160px;
+    width: 100%;
+    background-color: rgb(66, 66, 66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.circle_icon{
+    background-color: rgb(109, 163, 54);
+    color: white;
+    padding: 10px;
+    /* creates a circle */
+    border-radius: 50%;
+    font-size: 1.2rem;
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+.footer_menu{
+    color: white;
+}
+
+.copyright_footer{
+    height: 60px;
+    width: 100%;
+    background-color: rgb(109, 163, 54);
+    font-size: 17px;
+    text-align: center;
+    padding: 20px;
+}
+
