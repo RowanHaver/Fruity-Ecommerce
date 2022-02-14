@@ -172,7 +172,7 @@
     height: 260px;
     width: 230px;
     background-color: rgb(248, 248, 246);
-    margin: 0px 25px;
+    margin: 10px 25px;
     margin-top: 20px;
     /*makes the button edges curved*/
     border-radius: 7px;
@@ -207,6 +207,19 @@
     height: 40px;
 }
 
+.product_section{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#products-list1{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
 
 /* Store */
 
@@ -214,6 +227,7 @@
     height: 200px;
     width: 100%;
     background-color: rgb(248, 248, 246);
+    
 }
 
 .store_banner_img{
@@ -486,4 +500,7 @@
     text-align: center;
     padding: 20px;
 }
+
+
+
 

@@ -11,3 +11,4 @@ let signinCheck = () => {
     //add an else if client is not logged in it will direct them to the the regular signin page
 
 }
+
