@@ -10,7 +10,4 @@
     //Echo final string
     echo json_encode(iterator_to_array($products));
     
-
-
-
 ?>

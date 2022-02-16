@@ -1,4 +1,5 @@
 
+
 let loadProducts = () => {
 
     //Create request object
@@ -22,8 +23,9 @@ let loadProducts = () => {
 
     //Set up request and send it 
     request.open("GET", "../Server-php/Products-Display.php");
-    productsList = request.send();
-    console.log(productsList);
+
+    request.send();
+    //console.log(productsList);
 
     /*return productsList*/
 
@@ -35,19 +37,20 @@ window.onload = loadProducts();
 //Loads products into page
 let displayProducts = (jsonProducts) => {
     //Convert JSON to array of product objects
+    console.log('before: '+jsonProducts);
     let prodArray = JSON.parse(jsonProducts);
     console.log(prodArray);
 
 
     //Create HTML product card containing product data
-    let htmlstr;
+    let htmlstr = "";
     
      
     for(let i = 0; i < prodArray.length; i++){
         htmlstr +="<div class='product_card'>";
         htmlstr += "<img class='product_card_img' src=''> \n";
         htmlstr += "<div class='product_card_title' > "+ prodArray[i].name +"</div> ";
-        htmlstr += "<div class='product_card_price'> " + prodArray[i].price + " </div> ";
+        htmlstr += "<div class='product_card_price'> £" + prodArray[i].price + " </div> ";
         htmlstr += "</div>\n";
 
         console.log("Works");
