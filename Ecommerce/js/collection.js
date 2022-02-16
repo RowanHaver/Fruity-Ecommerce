@@ -13,15 +13,22 @@ let signinCheck = () => {
 }
 
 
-const pricelh = document.getElementById('price:l-h');
-const pricehl = document.getElementById('price:h-l');
+//Get elementID of dropdown ment
+const dropdownMenu = document.getElementById('dropdownMenu');
 
-pricelh.addEventListener('click', () => {
-    let dropdownName = document.getElementById('dropdownMenuButton1').innerHTML = "price: Low-High";
+//Listens to a click on the dropdown menu
+dropdownMenu.addEventListener('click', (e) => {
+
+    //Gets id of what has been clicked
+    let idName = e.target.id;
+    //Checks if idname is price low-high
+    if(idName == 'price:l-h'){
+        document.getElementById('dropdownMenuButton1').innerHTML = "price: Low-High";
+    }
+    //Checks if idname is price high-low
+    else if(idName == 'price:h-l'){
+        document.getElementById('dropdownMenuButton1').innerHTML = "price: High-Low";
+    } 
+
+    
 })
-
-pricehl.addEventListener('click', () => {
-    let dropdownName = document.getElementById('dropdownMenuButton1').innerHTML = "price: High-Low";
-})
-
-
