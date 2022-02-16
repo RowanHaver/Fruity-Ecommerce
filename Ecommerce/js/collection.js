@@ -24,11 +24,12 @@ dropdownMenu.addEventListener('click', (e) => {
     //Checks if idname is price low-high
     if(idName == 'price:l-h'){
         document.getElementById('dropdownMenuButton1').innerHTML = "price: Low-High";
+        loadProducts();
     }
     //Checks if idname is price high-low
     else if(idName == 'price:h-l'){
         document.getElementById('dropdownMenuButton1').innerHTML = "price: High-Low";
+        loadProducts();
     } 
 
-    
 })

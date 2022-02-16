@@ -1,4 +1,4 @@
-
+//let request = new XMLHttpRequest();
 
 let loadProducts = () => {
 
@@ -11,7 +11,9 @@ let loadProducts = () => {
         if(request.status === 200){
             //Add data from server to page
             console.log("success");
-            displayProducts(request.responseText);
+            //displayProducts(request.responseText);
+            filterProducts(request.responseText);
+            
 
         }
         else{
@@ -33,13 +35,15 @@ let loadProducts = () => {
 
 window.onload = loadProducts();
 
+//let jsonProds = request.responseText;
+
 
 //Loads products into page
-let displayProducts = (jsonProducts) => {
+let displayProducts = (/*jsonProducts*/ prodArray) => {
     //Convert JSON to array of product objects
-    console.log('before: '+jsonProducts);
-    let prodArray = JSON.parse(jsonProducts);
-    console.log(prodArray);
+    //console.log('before: '+jsonProducts);
+    //let prodArray = JSON.parse(jsonProducts);
+    //console.log(prodArray);
 
 
     //Create HTML product card containing product data
@@ -64,5 +68,40 @@ let displayProducts = (jsonProducts) => {
     
     
     document.getElementById("products-list1").innerHTML = htmlstr;
+}
+
+//Filter products
+let filterProducts = (jsonProducts) => {
+    let idValue = document.getElementById('dropdownMenuButton1').innerHTML;
+    console.log(idValue);
+
+    console.log('before: '+jsonProducts);
+    let prodArray = JSON.parse(jsonProducts);
+    console.log(prodArray);
+    if(idValue == "price: Low-High"){
+        console.log("Price low to high");
+        
+        //let arrayName = prodArray.name;
+
+        var sortedProducts = prodArray.sort(({price:a}, {price:b}) => a-b);
+        console.log(sortedProducts);
+        displayProducts(sortedProducts);
+
+    }
+    else if(idValue == "price: High-Low"){
+        console.log("Price high to low");
+
+        var sortedProducts = prodArray.sort(({price:a}, {price:b}) => b-a);
+        console.log(sortedProducts);
+        displayProducts(sortedProducts);
+    }
+    else{
+        console.log('before: '+jsonProducts);
+        let prodArray = JSON.parse(jsonProducts);
+        console.log(prodArray);
+
+        displayProducts(prodArray);
+    }
+
 }
 

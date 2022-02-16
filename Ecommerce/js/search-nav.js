@@ -60,7 +60,7 @@ let searchRequest = () =>{
             //Add data from server to page
             console.log("success");
             console.log(request.responseText);
-            displayProducts(request.responseText);
+            filterProducts(request.responseText);
             
         }
 
