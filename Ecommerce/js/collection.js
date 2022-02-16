@@ -12,3 +12,16 @@ let signinCheck = () => {
 
 }
 
+
+const pricelh = document.getElementById('price:l-h');
+const pricehl = document.getElementById('price:h-l');
+
+pricelh.addEventListener('click', () => {
+    let dropdownName = document.getElementById('dropdownMenuButton1').innerHTML = "price: Low-High";
+})
+
+pricehl.addEventListener('click', () => {
+    let dropdownName = document.getElementById('dropdownMenuButton1').innerHTML = "price: High-Low";
+})
+
+

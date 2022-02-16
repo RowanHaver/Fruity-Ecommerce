@@ -264,6 +264,13 @@
     width: 100%;
 }
 
+.filter_dropdown{
+    display: flex;
+    justify-content: right;
+    margin: 30px 200px 20px 0px ;
+
+}
+
 /* Sign in */
 
 .split_container{

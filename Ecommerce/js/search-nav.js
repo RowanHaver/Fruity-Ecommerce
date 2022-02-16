@@ -20,7 +20,7 @@ let displayNavigation = () =>{
         //Input
         navstr += "<input class='form-control form-control-sm' id='searchInfo' name='search' type='text' placeholder='Search' aria-label='Search'>";
         //Button icon
-        navstr += "<button class='btn btn-sm'  type='button' id='searchBtn' onclick='searchRequest()'><i class='bi bi-search' style='font-size: 1.55rem;'></i></button>";
+        navstr += "<button class='btn btn-sm'  type='button' id='searchBtn' onclick='searchRequest()' ><i class='bi bi-search' style='font-size: 1.55rem;'></i></button>";
     navstr += "</form>";
     //Icons
     navstr += " <a href='Cart.html'><i class='bi bi-bag icons navbar_bag_icon' ></i></a>";
