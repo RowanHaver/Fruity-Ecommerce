@@ -195,6 +195,14 @@
     color: rgb(65, 65, 65);
 }
 
+.product_card_add{
+    font-size: 15px;
+    border: none;
+    background-color: rgb(109, 163, 54);
+    color: white;
+    border-radius: 5px;
+}
+
 .all_products_button{
     background-color: rgb(109, 163, 54);
     color: white;

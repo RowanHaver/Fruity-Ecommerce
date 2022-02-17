@@ -55,6 +55,7 @@ let displayProducts = (/*jsonProducts*/ prodArray) => {
         htmlstr += "<img class='product_card_img' src=''> \n";
         htmlstr += "<div class='product_card_title' > "+ prodArray[i].name +"</div> ";
         htmlstr += "<div class='product_card_price'> £" + prodArray[i].price + " </div> ";
+        htmlstr += "<button class='product_card_add' onclick='addProducts()'>Add to cart</button> "
         htmlstr += "</div>\n";
 
         console.log("Works");
@@ -105,3 +106,102 @@ let filterProducts = (jsonProducts) => {
 
 }
 
+
+
+//Check users cart
+let checkCart = (_callback) => {
+
+    console.log("checking cart id now");
+
+    //Create request object
+    let request = new XMLHttpRequest();
+
+
+    //let searchData = document.getElementById("searchInfo").value; 
+    //console.log(searchData);       
+
+    request.onload = () => {
+        //Check HTTP status code
+        if(request.status === 200){
+            //Add data from server to page
+            console.log("success checkcart");
+            console.log(request.responseText);
+            //checkStatus = true;
+            _callback();
+        }
+        /*else{
+            checkStatus = false;
+        }*/
+        
+
+    }
+
+    //Set up request and send it 
+    //change 13 to cookies of user
+    //Extract cookie variable email and query
+    
+    //check if there is a sessionID (maybe using if array key exists)
+    if(1+1 == 2){
+        //customerID = sessionID.email
+        request.open("GET", "../Server-php/checkCart.php?customerID=" + 13);
+        request.send();
+    }
+    else{
+        //checkStatus = false;
+    }
+
+    
+
+}
+let checkStatus = false;
+
+//Add product to cart
+let addProducts = () => {
+    console.log("Add product has been clicked");
+    
+    checkCart(()=>{  
+        console.log("Add products works!");
+
+
+
+        //is probably unnecessary due to checkcart already checking if its correct, could probably remove all the check status
+        /*if(checkStatus){
+            
+        }
+        else{
+            console.log("Check status is false");
+        }*/
+    })
+
+    //checkCart();
+    //Check if user connection is successfull
+
+}
+
+let postItems = () =>{
+
+    console.log("Post items link has been clicked");
+
+    //Create request object
+    let request = new XMLHttpRequest();
+
+
+    request.onload = () => {
+        //Check HTTP status code
+        if(request.status === 200){
+            //Add data from server to page
+            console.log("success checkcart");
+            console.log(request.responseText);
+            //checkStatus = true;
+            
+        }
+        
+
+    }
+
+        request.open("POST", "../Server-php/checkCart.php");
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        //delete later -> check what the user has clicked possibly using (let idName = e.target.id;)
+        request.send();
+}

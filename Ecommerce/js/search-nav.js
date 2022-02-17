@@ -35,14 +35,18 @@ window.onload = displayNavigation();
 
 
 let searchRequest = () =>{
-    console.log("Clicked");
 
     //Create request object
     let request = new XMLHttpRequest();
 
 
     let searchData = document.getElementById("searchInfo").value; 
-    console.log(searchData);       
+    console.log(searchData);
+
+    /*if(searchData === "") {
+        //console.log(RUNS);
+        return false;
+    }*/
 
     //Check HTTP status code
     /*
@@ -77,8 +81,10 @@ let searchRequest = () =>{
     }*/
 
     //Set up request and send it 
-    request.open("GET", "../Server-php/Search.php?search=" + searchData);
-    request.send();
+        request.open("GET", "../Server-php/Search.php?search=" + searchData);
+        request.send();
+
+    
     
     
 
