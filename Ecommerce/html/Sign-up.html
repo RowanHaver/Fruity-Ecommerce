@@ -51,22 +51,27 @@
                     <form action="" class="signup_form">
                         <!-- email -->
                         <p class="input_label" >Enter Email:</p>
-                        <input type="email" name="email" id="" class="input_box">
+                        <input type="email" name="email" id="email" class="input_box">
+                        <!-- error message-->
+                        <p id="emailError"></p>
                         <!-- number -->
                         <p class="input_label" >Telephone Number:</p>
-                        <input type="tel" name="telephone" id="" class="input_box">
+                        <input type="tel" name="telephone" id="telephone" class="input_box">
                         <!-- address -->
                         <p class="input_label" >Address:</p>
-                        <input type="text" name="address" id="" class="input_box">
+                        <input type="text" name="address" id="address" class="input_box">
                         <!-- password -->
                         <p class="input_label" >Create Password:</p>
-                        <input type="password" name="password" id="" class="input_box">
+                        <input type="password" name="password" id="password" class="input_box">
+                        <!-- error message-->
+                        <p id="passwordError"></p>
                         <!-- confirm password -->
                         <p class="input_label" >Confirm Password:</p>
-                        <input type="password" name="password" id="" class="input_box">
+                        <input type="password" name="confirmPassword" id="confirmPassword" class="input_box">
+                        <!-- error message-->
+                        <p id="error"></p>
                         <!-- submit button -->
-                        <br>
-                        <button type="submit" class="submit_button">Create account</button>
+                        <button type="button" class="submit_button" onclick="registration()">Create account</button>
                     </form>
                     <!-- Dont have an account? -->
                     <div class="account_question_div">
@@ -96,8 +101,9 @@
             <div class="copyright_footer">Copyright © 2022 Fruity | Powered by fruity</div>
         </section>
 
-        <script src="../js/collection.js"></script>
+        <!--<script src="../js/collection.js"></script>-->
         <script src="../js/search-nav.js" ></script>
+        <script src="../js/Registration.js"> </script>
         
     </body>
 </html>

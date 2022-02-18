@@ -199,9 +199,23 @@ let postItems = () =>{
 
     }
 
-        request.open("POST", "../Server-php/checkCart.php");
-        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    request.open("POST", "../Server-php/checkCart.php");
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-        //delete later -> check what the user has clicked possibly using (let idName = e.target.id;)
-        request.send();
+    //delete later -> check what the user has clicked possibly using (let idName = e.target.id;)
+    //get id of products list
+    let productListID = document.getElementById('products-list1');
+    
+
+    //Listens to a click on the dropdown menu
+    productListID.addEventListener('click', (e) => {
+
+        //Gets id of what has been clicked
+        let idName = e.target.id;
+
+        //Checks if idname is price low-high
+        request.send("");
+
+    })
+    
 }

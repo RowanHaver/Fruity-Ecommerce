@@ -9,6 +9,8 @@
         "customerID" => $_GET['customerID'], 
     ];
 
+    var_dump($findCriteria);
+
     //Find all of the customers that match  this criteria
     $cursor = $collections->find($findCriteria);
 
