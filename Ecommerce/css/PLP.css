@@ -470,7 +470,24 @@
     font-size: 17px;
 }
 
+.button_row{
+    display: flex;
+    gap: 5px;
+}
+
 .checkout_button{
+    background-color: rgb(109, 163, 54);
+    color: white;
+    border: none;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+    height: 40px;
+}
+
+.clear_button{
     background-color: rgb(109, 163, 54);
     color: white;
     border: none;

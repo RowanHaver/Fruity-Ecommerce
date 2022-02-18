@@ -2,17 +2,20 @@
 aim is to check login and change href link, (replace number with check login using session id) 
 if user is logged in change the href link to users page where they can edit and check there basket.
 */
-number = 2;
 let signinCheck = () => {
-    if(number == 2){
+    if( array_key_exists("user", $_SESSION) ){
         let a = document.getElementById("signin");
-        a.href = "Sign-in.html";
+        a.href = "../html/User.html";
+    }
+    else{
+        let a = document.getElementById("signin");
+        a.href = "../html/Sign-in.html";
     }
     //add an else if client is not logged in it will direct them to the the regular signin page
 
 }
 
-
+/*
 //Get elementID of dropdown ment
 const dropdownMenu = document.getElementById('dropdownMenu');
 
@@ -32,4 +35,40 @@ dropdownMenu.addEventListener('click', (e) => {
         loadProducts();
     } 
 
-})
+})*/
+
+/*
+let getSessionIDEmail = () =>{
+
+}
+
+
+let checkSessionID = () =>{
+
+    //Create request object
+    let request = new XMLHttpRequest();
+
+
+    //let searchData = document.getElementById("searchInfo").value; 
+    //console.log(searchData);
+
+    request.onload = () => {
+        //Check HTTP status code
+        if(request.status === 200){
+            //Add data from server to page
+            console.log("success");
+            console.log(request.responseText);
+            filterProducts(request.responseText);
+            
+        }
+
+    }
+
+    //Set up request and send it 
+    request.open("GET", "../Server-php/CheckSessionID.php");
+    request.send();
+
+
+    
+}
+*/

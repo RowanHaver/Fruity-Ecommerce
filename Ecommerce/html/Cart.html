@@ -27,23 +27,32 @@
             <!-- cart title -->
             <div class="cart_title">Your cart</div>
             <!-- cart amount -->
-            <div class="cart_para">You have 0 amount of items in your cart</div>
+            <div class="cart_para" id="itemAmount">You have 0 amount of items in your cart</div>
 
             <!-- card card -->
-            <div class="cart_card"></div>
+            <div class="cart_card">
+                <!--load baskets -->
+                <div id="loadBasket"></div>
+            </div>
 
             <!-- checkout column -->
             <div class="checkout_column">
                 <!-- checkout row -->
                 <div class="checkout_row">
                     <!-- checkout price title -->
-                    <div class="checkout_price_title">Order Sub-Total</div>
+                    <div class="checkout_price_title" >Order Sub-Total</div>
                     <!-- checkout price -->
-                    <div class="checkout_price">£0.00</div>
+                    <div class="checkout_price" id="checkout_price">£0.00</div>
                     
                 </div>
-                <!-- checkout button -->
-                <button class="checkout_button">Check out</button>
+                <div class="button_row">
+                    <!-- clear basket button -->
+                    <button class="clear_button" id="clear_button" onclick="emptyBasket()">Empty basket</button>
+                    <!-- checkout button -->
+                    <button class="checkout_button" id="checkout_button" onclick="checkout()">Check out</button>
+                </div>
+
+
             </div>
             
         </section>
@@ -70,6 +79,7 @@
 
         <script src="../js/collection.js"></script>
         <script src="../js/search-nav.js" ></script>
+        <script src="../js/Basket.js"></script>
                
     </body>
 </html>

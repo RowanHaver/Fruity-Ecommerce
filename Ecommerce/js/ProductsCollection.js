@@ -55,7 +55,11 @@ let displayProducts = (/*jsonProducts*/ prodArray) => {
         htmlstr += "<img class='product_card_img' src=''> \n";
         htmlstr += "<div class='product_card_title' > "+ prodArray[i].name +"</div> ";
         htmlstr += "<div class='product_card_price'> £" + prodArray[i].price + " </div> ";
-        htmlstr += "<button class='product_card_add' onclick='addProducts()'>Add to cart</button> "
+        htmlstr += "<div id='product_card_id' style='display: none;'>"+ prodArray[i]._id +"</div>";
+        //htmlstr += "<button class='product_card_add' onclick=addToBasket('" + prodArray[i]._id/*$document["_id"] */+ ", " + prodArray[i].name/*$document["name"]*/ + "')>Add to cart</button> ";
+        //htmlstr += `<button class='product_card_add' onclick='addToBasket\(${prodArray[i]._id.$oid} ,${prodArray[i].name})'>Add to cart</button> `;
+        htmlstr += "<button class='product_card_add' id='product_button' onclick='addToBasket("+JSON.stringify(prodArray[i]._id)+","+JSON.stringify(prodArray[i].name)+","+JSON.stringify(prodArray[i].price)+")'>Add to cart</button>";
+        console.log(prodArray[i]._id);
         htmlstr += "</div>\n";
 
         console.log("Works");
@@ -70,6 +74,8 @@ let displayProducts = (/*jsonProducts*/ prodArray) => {
     
     document.getElementById("products-list1").innerHTML = htmlstr;
 }
+
+
 
 //Filter products
 let filterProducts = (jsonProducts) => {
@@ -155,7 +161,7 @@ let checkCart = (_callback) => {
 }
 let checkStatus = false;
 
-//Add product to cart
+//Add product gets clicked, adds to cart
 let addProducts = () => {
     console.log("Add product has been clicked");
     
