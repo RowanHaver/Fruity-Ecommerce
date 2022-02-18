@@ -52,7 +52,7 @@ let displayProducts = (/*jsonProducts*/ prodArray) => {
      
     for(let i = 0; i < prodArray.length; i++){
         htmlstr +="<div class='product_card'>";
-        htmlstr += "<img class='product_card_img' src=''> \n";
+        htmlstr += "<img class='product_card_img' src='../img/"+ prodArray[i].name +".png'> \n";
         htmlstr += "<div class='product_card_title' > "+ prodArray[i].name +"</div> ";
         htmlstr += "<div class='product_card_price'> £" + prodArray[i].price + " </div> ";
         htmlstr += "<div id='product_card_id' style='display: none;'>"+ prodArray[i]._id +"</div>";
@@ -113,7 +113,7 @@ let filterProducts = (jsonProducts) => {
 }
 
 
-
+//remove
 //Check users cart
 let checkCart = (_callback) => {
 
@@ -161,6 +161,7 @@ let checkCart = (_callback) => {
 }
 let checkStatus = false;
 
+//remove
 //Add product gets clicked, adds to cart
 let addProducts = () => {
     console.log("Add product has been clicked");
@@ -168,19 +169,7 @@ let addProducts = () => {
     checkCart(()=>{  
         console.log("Add products works!");
 
-
-
-        //is probably unnecessary due to checkcart already checking if its correct, could probably remove all the check status
-        /*if(checkStatus){
-            
-        }
-        else{
-            console.log("Check status is false");
-        }*/
     })
-
-    //checkCart();
-    //Check if user connection is successfull
 
 }
 

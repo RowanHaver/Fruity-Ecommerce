@@ -4,19 +4,14 @@
     //create instance of MongoDB client
     $collections = (new MongoDB\Client)->ecommerce->Customers;
 
-
+    //getting email input
     $email= filter_input(INPUT_POST, 'email');
+    //getting password input
     $password = filter_input(INPUT_POST, 'password');
 
-    //var_dump($email, $telephone, $address, $password, $confirmPassword);
-/*
-    $dataArray = [
-        "email" => $email,
-        "password" => $password,
-    ];*/
-
+    
     $check = $collections->findOne(['email' => $email, "password" => $password,]);
-    //$passwordCheck = $collections->findOne(['password' => $password]);
+    
 
     if($check != null){
         session_start();

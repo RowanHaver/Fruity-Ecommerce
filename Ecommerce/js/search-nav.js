@@ -24,7 +24,7 @@ let displayNavigation = () =>{
     navstr += "</form>";
     //Icons
     navstr += " <a href='Cart.html'><i class='bi bi-bag icons navbar_bag_icon' ></i></a>";
-    navstr += "<a id='signin' onclick='signinCheck()' href=''><i class='bi bi-person icons navbar_person_icon' ></i></a>";
+    navstr += "<a id='signin' onclick='signinCheck()' href='#'><i class='bi bi-person icons navbar_person_icon' ></i></a>";
     navstr += "</div> </div> </div> </nav>";
 
     document.getElementById("navigation").innerHTML = navstr;
@@ -43,21 +43,6 @@ let searchRequest = () =>{
     let searchData = document.getElementById("searchInfo").value; 
     console.log(searchData);
 
-    /*if(searchData === "") {
-        //console.log(RUNS);
-        return false;
-    }*/
-
-    //Check HTTP status code
-    /*
-    request.onreadystatechange = () => {
-        if(request.status === 200){
-            console.log("Request "+request.responseText);
-            display(request.responseText);
-        }
-        
-      }
-      */
     request.onload = () => {
         //Check HTTP status code
         if(request.status === 200){
@@ -69,16 +54,6 @@ let searchRequest = () =>{
         }
 
     }
-    /*if(request.status === 0){
-        //Add data from server to page
-        console.log("success");
-        //display(request.responseText);
-        console.log(request.responseText);
-
-    }
-    else{
-        alert("Error communicating with server: " + request.status);
-    }*/
 
     //Set up request and send it 
         request.open("GET", "../Server-php/Search.php?search=" + searchData);

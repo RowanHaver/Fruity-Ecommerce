@@ -16,7 +16,7 @@ let registration = () => {
                 document.getElementById('emailError').innerHTML = JSON.parse(request.responseText);
             }else{
                 console.log(request.responseText);
-                document.getElementById('error').innerHTML = 'works';
+                document.getElementById('error').innerHTML = 'You created your account, log in';
             }
         }
         

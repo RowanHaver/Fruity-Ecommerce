@@ -169,7 +169,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 260px;
+    height: 300px;
     width: 230px;
     background-color: rgb(248, 248, 246);
     margin: 10px 25px;
@@ -544,6 +544,22 @@
     font-size: 17px;
     text-align: center;
     padding: 20px;
+}
+
+/* User page */
+
+.logout_button{
+    background-color: rgb(109, 163, 54);
+    color: white;
+    /* Removes the borders*/
+    border: none;
+    display: inline-block;
+    /* makes the button edges curved */
+    border-radius: 5px;
+    /* aligns text to center*/
+    text-align: center;
+    width: 120px;
+    height: 40px;
 }
 
 

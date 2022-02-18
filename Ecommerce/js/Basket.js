@@ -26,7 +26,7 @@ function loadBasket(){
     for(let i=0; i<basket.length; ++i){
         htmlStr += "Product name: " + basket[i].name +"--------";
         htmlStr += "Price: " + basket[i].price + "<br>";
-        prodIDs.push({id: basket[i].id, count: 1});//Add to product array
+        prodIDs.push({id: basket[i].id.$oid, count: 1});//Add to product array
         productAmount(basket.length);
         //totalPrice += basket[i].price;
         //console.log(basket[i].price);
@@ -76,53 +76,34 @@ let productAmount = (amount) =>{
     //itemAmount
 }
 
-
+//Check out
 let checkout = () =>{
-    console.log('works');
-
-}
-
-//
-let registration = () => {
-    console.log("Post items link has been clicked");
+    console.log("Checkout");
 
     //Create request object
     let request = new XMLHttpRequest();
-
 
     request.onload = () => {
         //Check HTTP status code
         if(request.status === 200){
             //Add data from server to page
-            console.log("success checkcart");
-            if(request.responseText.includes("Email has been used")){
-                document.getElementById('emailError').innerHTML = JSON.parse(request.responseText);
-            }else{
-                console.log(request.responseText);
-                document.getElementById('error').innerHTML = 'works';
-            }
+            emptyBasket();
+            document.getElementById('message').innerHTML = "Sucessfull";
+            
         }
-        
-
     }
 
-    let regEmail = document.getElementById("email").value;
-    let regTelephone = document.getElementById("telephone").value;
-    let regAddress = document.getElementById("address").value;
-    let regPassword = document.getElementById("password").value;
-    let regConfirmPassword = document.getElementById("confirmPassword").value;
+    let basket = getBasket();//Load or create basket
+    
+    console.log(basket);
 
+    request.open("POST", "../Server-php/Checkout.php");
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    request.send("orders=" + basket);
 
-    if(validateInput(regEmail,regPassword,regConfirmPassword)){
-        request.open("POST", "../Server-php/Registration.php");
-        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request.send("email=" + regEmail + "&telephone=" + regTelephone + "&address=" + regAddress + "&password=" + regPassword + "&confirmPassword=" + regConfirmPassword);
-    }
-    else{
-        console.log("Not working");
-    }
 
 }
+
 
 
 
